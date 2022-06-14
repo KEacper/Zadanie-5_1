@@ -15,7 +15,19 @@
   })
 
   cw1.addEventListener("click", function () {
-    //TODO implement it
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(function(dane){
+        NowaLinia(dane)
+      })
+    function NowaLinia(dane){
+      answer.innerHTML="";
+      for (var i=0; i<dane.length; i++){
+        var div = document.createElement("div");
+        div.innerHTML= 'UserID: '+ dane[i].userId +'<br>'+'ID: '+ dane[i].id +'<br>'+'title: '+ dane[i].title +'<br>'+'body: '+ dane[i].body + '<br> <br> <hr style="width:50%;text-align:left;margin-left:0">';
+      answer.appendChild(div);
+      }
+    }
   })
 
   cw2.addEventListener("click", function () {
