@@ -1,3 +1,6 @@
+function myFunction() {
+  alert("Ładowanie");
+}
 (function () {
   const example = document.getElementById('example')
   const cw1 = document.getElementById('cw1')
@@ -31,7 +34,9 @@
   })
 
   cw2.addEventListener("click", function () {
-    //TODO implement it
+function myFunction() {
+  alert("Ładowanie");
+}
   })
 
   cw3.addEventListener("click", function () {
